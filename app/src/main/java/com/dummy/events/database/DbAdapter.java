@@ -30,8 +30,12 @@ public class DbAdapter extends SQLiteOpenHelper {
                 "title varchar(50), signstate varchar(10) , signemail varchar(25)," +
                 "image blob,category varchar(50),comments varchar(1000),description varchar(1000) );";
 
+        String table1 = "create table comments ( _id integer ," +
+                "AID integer primary key autoincrement,comment varchar(1000) )";
+
 
         db.execSQL(table);
+        db.execSQL(table1);
     }
 
     @Override
@@ -58,6 +62,16 @@ public class DbAdapter extends SQLiteOpenHelper {
 
         SQLiteDatabase db = this.getWritableDatabase();
         db.insert("events",null,cv);
+    }
+
+    public void insertComments(StringVo vo)
+    {
+        ContentValues cv = new ContentValues();
+        cv.put("_id",vo.getId());
+        cv.put("comment",vo.getComment());
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert("comments",null,cv);
     }
 
     public Cursor fetch(String query)

@@ -82,7 +82,7 @@ public class EventsList extends AppCompatActivity implements View.OnClickListene
     protected void onStart() {
         super.onStart();
 
-        query = "Select title as title,signState as signState,image as image from events";
+        query = "Select AID as id,title as title,signState as signState,image as image from events";
         cursor = dao.fetch(query);
         cursor.moveToFirst();
         adapter = new Adapter(this,cursor);

@@ -8,25 +8,25 @@ import android.database.Cursor;
  */
 
 public class Dao {
-    DbAdapter adapter ;
+    DbAdapter adapter;
 
-    public Dao(Context context)
-    {
+    public Dao(Context context) {
         adapter = new DbAdapter(context);
     }
 
-    public void anyQuery(String query)
-    {
+    public void anyQuery(String query) {
         adapter.anyQuery(query);
     }
 
-    public void insert(Vo vo)
-    {
+    public void insert(Vo vo) {
         adapter.insert(vo);
     }
 
-    public Cursor fetch(String query)
-    {
+    public void insertComment(StringVo vo) {
+        adapter.insertComments(vo);
+    }
+
+    public Cursor fetch(String query) {
         return adapter.fetch(query);
     }
 

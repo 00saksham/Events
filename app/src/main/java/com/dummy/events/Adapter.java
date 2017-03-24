@@ -1,6 +1,7 @@
 package com.dummy.events;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -80,6 +81,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         @Override
         public void onClick(View v) {
 
+            cursor.moveToPosition(getAdapterPosition());
+            Intent intent = new Intent(context,IndividualEvent.class);
+            intent.putExtra("id",cursor.getInt(cursor.getColumnIndexOrThrow("id")));
+            context.startActivity(intent);
         }
     }
 }

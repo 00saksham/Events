@@ -48,7 +48,7 @@ public class AddEvent extends AppCompatActivity implements View.OnClickListener,
         setContentView(R.layout.activity_add_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         eventImage = (ImageView) findViewById(R.id.eventImage);
         title = (TextView) findViewById(R.id.title);
