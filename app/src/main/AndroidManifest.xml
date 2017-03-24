@@ -12,21 +12,26 @@
         <activity
             android:name=".AddEvent"
             android:label="@string/title_activity_add_event"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".EventsList"
-            android:theme="@style/AppTheme.NoActionBar.NoStatusBar">
+            android:theme="@style/AppTheme.NoActionBar.NoStatusBar"></activity>
+        <activity
+            android:name=".IndividualEvent"
+            android:theme="@style/AppTheme.NoActionBar.NoStatusBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Login"
+            android:noHistory="true"
+            android:theme="@style/AppTheme.NoActionBar.TranslucentStatus">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".IndividualEvent"
-            android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar.NoStatusBar"></activity>
     </application>
 
 </manifest>

@@ -19,7 +19,7 @@
             android:background="@color/colorAccent">
 
             <TextView
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:id="@+id/eventCategory"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
 
         <TextView
             android:id="@+id/description"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

@@ -1,5 +1,6 @@
 package com.dummy.events;
 
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,8 +14,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.dummy.events.database.Dao;
+import com.pixplicity.easyprefs.library.Prefs;
 
 public class EventsList extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,12 +37,21 @@ public class EventsList extends AppCompatActivity implements View.OnClickListene
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        new Prefs.Builder()
+                .setContext(this)
+                .setMode(ContextWrapper.MODE_PRIVATE)
+                .setPrefsName(getPackageName())
+                .setUseDefaultSharedPreference(true)
+                .build();
+
         fab = (FloatingActionButton) findViewById(R.id.fab);
         recyclerView = (RecyclerView) findViewById(R.id.recycler);
         dao = new Dao(this);
 
         initNavigationDrawer();
         fab.setOnClickListener(this);
+
+        Toast.makeText(this, "Welcome "+Prefs.getString("Name",""), Toast.LENGTH_LONG).show();
     }
 
     public void initNavigationDrawer() {
