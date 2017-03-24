@@ -26,7 +26,7 @@ public class DbAdapter extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String table = "create table events (int AID autoincrement primary key," +
+        String table = "create table events (AID integer primary key autoincrement," +
                 "title varchar(50), signstate varchar(10) , signemail varchar(25)," +
                 "image blob,category varchar(50),comments varchar(1000),description varchar(1000) );";
 
