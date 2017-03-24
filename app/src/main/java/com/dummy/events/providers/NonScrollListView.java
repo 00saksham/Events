@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.providers;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.providers;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.dummy.events.R;
+import com.dummy.events.activities.IndividualEvent;
 
 /**
  * Created by Saksham on 24-Mar-17.

@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.activities;
 
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -18,6 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.dummy.events.providers.CursorComment;
+import com.dummy.events.providers.NonScrollListView;
+import com.dummy.events.R;
 import com.dummy.events.database.Dao;
 import com.dummy.events.database.StringVo;
 import com.pixplicity.easyprefs.library.Prefs;

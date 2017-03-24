@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dummy.events.IndividualEvent"
+    tools:context="com.dummy.events.activities.IndividualEvent"
     tools:showIn="@layout/activity_individual_event">
 
     <LinearLayout
@@ -78,11 +78,11 @@
         </LinearLayout>
 
 
-        <com.dummy.events.NonScrollListView
+        <com.dummy.events.providers.NonScrollListView
             android:id="@+id/list"
             android:layout_margin="8dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></com.dummy.events.NonScrollListView>
+            android:layout_height="wrap_content"></com.dummy.events.providers.NonScrollListView>
 
     </LinearLayout>
 

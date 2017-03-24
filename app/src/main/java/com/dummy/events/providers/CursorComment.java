@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.providers;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 import  android.database.Cursor;
+
+import com.dummy.events.R;
 
 /**
  * Created by Saksham on 24-Mar-17.

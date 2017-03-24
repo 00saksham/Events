@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.activities;
 
 import android.content.ContextWrapper;
 import android.content.Intent;
@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.dummy.events.providers.Adapter;
+import com.dummy.events.R;
 import com.dummy.events.database.Dao;
 import com.pixplicity.easyprefs.library.Prefs;
 
@@ -64,8 +66,15 @@ public class EventsList extends AppCompatActivity implements View.OnClickListene
                 int id = item.getItemId();
                 switch (id)
                 {
-                    case R.id.dashboard : drawerLayout.closeDrawers();
+                    case R.id.add : drawerLayout.closeDrawers();
+                        Intent intent = new Intent(EventsList.this,AddEvent.class);
+                        startActivity(intent);
                     break;
+
+                    case R.id.login: drawerLayout.closeDrawers();
+                        Intent intent1 = new Intent(EventsList.this,Login.class);
+                        startActivity(intent1);
+                        break;
 
                 }
                 return true;

@@ -1,4 +1,4 @@
-package com.dummy.events;
+package com.dummy.events.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dummy.events.R;
 import com.dummy.events.database.Dao;
 import com.dummy.events.database.Vo;
 
