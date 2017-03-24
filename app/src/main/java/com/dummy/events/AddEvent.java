@@ -48,6 +48,7 @@ public class AddEvent extends AppCompatActivity implements View.OnClickListener,
         setContentView(R.layout.activity_add_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         eventImage = (ImageView) findViewById(R.id.eventImage);
         title = (TextView) findViewById(R.id.title);
@@ -129,7 +130,8 @@ public class AddEvent extends AppCompatActivity implements View.OnClickListener,
                             vo.setDescription(description.getText().toString());
                             dao.insert(vo);
 
-                            Toast.makeText(this, "Done "+ selectedCategory, Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Added Event", Toast.LENGTH_SHORT).show();
+                            finish();
                         }
                     }else
                     {
@@ -155,5 +157,18 @@ public class AddEvent extends AppCompatActivity implements View.OnClickListener,
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        finish();
+        return  true;
     }
 }

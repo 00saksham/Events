@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Events</string>
     <string name="title_activity_add_event">AddEvent</string>
+    <string name="title_activity_events_list">EventsList</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>
